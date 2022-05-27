@@ -1,19 +1,63 @@
+#userScore {
+    display: none;
+    flex-direction:row
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: normal;
 }
+
+header{
+color: white;
+position: relative;
+right: -20%;
+font-size: 70px;
+}
+
+
+button {
+  background-color: rgb(180, 54, 234); 
+  height: 40px;
+  width: 80px;
+  border-radius: 10%;
+  font-weight: bold;
+  color:white;
+}
+
 body{
-  background-color: aqua;
-}
-.startButton{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  
 }
 
-start Button
+#answerContainer{
+  position: relative;
+  margin-top:20%;
+  background-color: #555;
+  color: #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 700px;
+  padding: 20px;
+  right: 120px;
+}
+
+h1{
+  font-size: 25px;
+}
+
+h2{
+  font-size: 12px;
+}
+
+.score, .userScore, .yourScore, .fraction {
+  color: grey;
+}

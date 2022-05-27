@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <title>Code Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
 </head>
+<header>Code Quiz</header>
 <body>
-    <div class = "startButton"><button>Start</button></div>
-
-    <div class ="infoBox">
-<div class="infoTitle">
-
-    </div>
-    <div class ="infoList">
-<div class="info"> 1. You only have <span> 60 seconds</span> for Quiz.</div>
-<div class="info"> 2. If you answer incorrectly <span> 10 seconds </span> will be deducted.</div>
-<div class="info"> 3. Your score is how many seconds are left at the end.</div>
-<div class="info"> 4. You can save your highcore by submitting your initials.</div>
-    </div>
-
-
-
-
-    </div>
-    
-    
+        <div id="answerContainer">
+          <div >
+            <h1 class="questionContainer"></h1>
+          </div>
+          <div class="answerOptions">
+            <button id=button class="answer1" onclick="button1()"></button>
+            <button id=button class="answer2" onclick="button2()"></button>
+            <button id=button class="answer3" onclick="button3()"></button>
+            <button id=button class="answer4" onclick="button4()"></button>
+            <h2 class="timer"></h2>
+          </div>
+        </div>
+        <div id="userScore">
+          <h1 class="yourScore">Your Score: </h1>
+          <h1 class="score"></h1>
+          <h1 class="fraction">/5</h1>
+        </div> 
+        <script src="./script.js"></script>
 </body>
 </html>
