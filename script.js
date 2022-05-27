@@ -62,7 +62,7 @@ var answerAEle = document.querySelector(".answer1")
 var answerBEle = document.querySelector(".answer2")
 var answerCEle = document.querySelector(".answer3")
 var answerDEle = document.querySelector(".answer4")
-
+var answerOptions = document.querySelector(".answerOptions")
 
 var index = 0
 
@@ -106,8 +106,20 @@ function button4(){
     score += 1
   } else {
   }
-  addIndexNumber()
+  displayQuestions()
 }
+answerOptions.addEventListener('click', function(event) {
+  var element = event.target;
+  if (element.matches('button')) {
+    if(element.textContent === questions[index].answer){
+      score += 1
+    } 
+    console.log(score);
+    console.log(element.textContent, questions[index].answer);
+    index += 1;
+    displayQuestions();
+  }
+});
 
 var scoreEle = document.querySelector(".score")
 
@@ -117,8 +129,8 @@ function showQuizFinalScreen() {
     scoreEle.textContent = score
 }
 
-function addIndexNumber() {
-  index += 1
+function displayQuestions() {
+  
   if (index <= randomArray.length - 1){
     questionEle.textContent = randomArray[index].question
     answerAEle.textContent = randomArray[index].answerA
